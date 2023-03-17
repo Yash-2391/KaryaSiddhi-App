@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.taskList{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+.taskList div{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.completeStatus{
+  width: 5vw;
+}
+.taskName{
+  width: 10vw;
+}
+.taskDesc{
+  width: 35vw;
+}
+.duedate{
+  width: 10vw;
+}
+.priority{
+  width: 5vw;
+}
+button{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .taskList {
+    display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns:5vw 1fr 10vw;
+  }
+  .completeStatus{
+    grid-row: 2/3;
+    width: 5vw;
+  }
+  .taskName{
+    grid-column: 1/2;
+  }
+  .taskDesc{
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .duedate{
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+  .priority{
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+}

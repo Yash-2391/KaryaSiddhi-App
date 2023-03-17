@@ -1,0 +1,74 @@
+.home
+{
+  height: 100%;
+  width: 100%;
+  /* margin-bottom: 2vh; */
+}
+.text-center{
+  text-align: center;
+}
+.infoLine{
+  display: flex;
+  justify-content: space-evenly;
+}
+.dropDown{
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.taskCompleted{
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ml-5{
+  margin-left: 10px;
+}
+.taskAssigned{
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropDown select{
+  border: 0;
+  font-size: 20px;
+  font-weight:bold
+}
+.dropDown select option{
+  border: none;
+}
+.colorBlack{
+  color: black;
+  font-weight: bold;
+}
+.marginAll{
+  margin: 20px;
+}
+.taskList{
+  margin-top: 20vh;
+}
+.taskLine{
+  display: flex;
+  align-items: center;
+}
+.iconColor{
+  color: rgb(27, 216, 27);
+}
+.appTaskList{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 900px) {
+  .infoLine h4{
+    /* display: block;
+    width: 100%;
+    margin:auto auto; */
+    display: none;
+  }
+}
+

@@ -1,0 +1,20 @@
+<div class="container" *ngFor="let task of taskList">
+  <div class="taskList">
+      <div class="completeStatus">
+        <button (click)="taskCompleted(task)"><i class="fa-regular fa-circle-check fa-2x" [ngClass]="{
+          colorComplete: task.taskStatus == 'complete',
+          colorIncomplete: task.taskStatus == 'incomplete'
+        }"></i></button>
+      </div>
+      <div class="taskName">{{ task.taskName }}</div>
+      <div class="taskDesc">{{ task.taskDesc }}</div>
+      <div class="dueDate">{{ task.dueDate }}</div>
+      <div class="priority">
+        <i class="fa-solid" [ngClass]="{
+        'fa-arrow-up': task.taskPriority == 'high',
+        'fa-arrow-right': task.taskPriority == 'medium',
+        'fa-arrow-down': task.taskPriority == 'low'
+      }"></i>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+.model{
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(10, 10, 8,0.5);
+}
+.model-content{
+  border: 2px solid red;
+  width: 60%;
+  padding: 2% 1%;
+  margin: 5% auto;
+  background-color: bisque;
+}
+.mt-5{
+  margin-top: 3vh;
+}
+label{
+  width: 100%;
+  font-size: 3vh;
+}
+input[type='text'],input[type='date'],select{
+  width: 100%;
+  padding: 1%;
+  font-size: 3vh;
+}
+.btnbox{
+  display: flex;
+  justify-content: end;
+}
+.btn{
+  padding: 1vh 3vh;
+  margin-left: 3vh;
+  background-color: rgb(99, 108, 230);
+  color: white;
+  cursor:pointer;
+}
+.displayModel{
+  display: none;
+}
+a{
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 900px) {
+  .model-content{
+    width: 80%;
+    margin: 20% auto;
+  }
+
+}

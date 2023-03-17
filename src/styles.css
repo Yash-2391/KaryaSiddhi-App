@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+.hr{
+   border: 1px solid rgb(35, 8, 69);
+}
+app-root{
+  height: 100vh;
+}
+.colorComplete{
+  color: rgb(27, 216, 27);
+}
+.colorIncomplete{
+  color: red;
+}
+button{
+  border: none;
+  background-color: transparent;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="heading marginAll">
+    <h2>My Tasks</h2>
+    <select name="statusDropDown" id="statusDropDown" #taskStatus (change)="onStatusChange(taskStatus.value)">
+      <option value="incomplete">Incomplete Tasks</option>
+      <option value="complete">Completed Tasks</option>
+    </select>
+  </div>
+  <div class="taskList marginAll">
+    <div class="taskLine">
+      <h3>My Priorities</h3>
+      <span class="ml-5">(next 3 days - high Priorities)</span>
+      <button (click)="toggleModel()"><i class="ml-5 fa-solid fa-plus fa-2x"></i></button>
+    </div>
+  </div>
+  <div class="appTaskList">
+    <app-task-item [taskStatus]="taskStatus" [taskList]="(taskStatus.value === completeTask)?threeHighCompletedTask.slice(0,3):threeHighInCompletedTask.slice(0,3)" (reload)="reload($event)"></app-task-item>
+  </div>
+  <div class="taskList marginAll">
+    <div class="taskLine">
+      <h3>Today's Task</h3>
+      <button (click)="toggleModel()"><i class="ml-5 fa-solid fa-plus fa-2x"></i></button>
+    </div>
+  </div>
+  <div class="appTaskList">
+    <app-task-item [taskStatus]="taskStatus" [taskList]="(taskStatus.value === completeTask)?completeTodayTask.slice(0,3):inCompleteTodayTask.slice(0,3)" (reload)="reload($event)"></app-task-item>
+  </div>
+  <div class="taskList marginAll">
+    <div class="taskLine">
+      <h3>Later's Task</h3>
+      <button (click)="toggleModel()"><i class="ml-5 fa-solid fa-plus fa-2x"></i></button>
+    </div>
+  </div>
+  <div class="appTaskList">
+    <app-task-item [taskStatus]="taskStatus" [taskList]="(taskStatus.value === completeTask)?completeLaterTask.slice(0,3):inCompleteLaterTask.slice(0,3)" (reload)="reload($event)"></app-task-item>
+  </div>
+</div>
+
+<app-input-modal *ngIf="displayModel" (x)="unDisplay($event)" [myTask]="myTask"></app-input-modal>

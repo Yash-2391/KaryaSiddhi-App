@@ -1,0 +1,33 @@
+    <div class="model" id="model1">
+      <div class="model-content">
+        <h2>New Task</h2>
+        <form class="" #taskAdd="ngForm">
+          <div class="name mt-5">
+            <label for="taskTitle">Title</label><br>
+            <input type="text" id="taskTitle" name="taskTitle" class="mt-5" ngModel/>
+          </div>
+          <div class="desc mt-5" >
+            <label for="taskDesc">Description</label><br>
+            <input type="text" id="taskDesc" name="taskDesc" class="mt-5" ngModel/>
+          </div>
+          <div class="priority mt-5">
+            <label for="taskPriority">Priority</label><br>
+            <select name="taskPriority" id="taskPriority" class="mt-5" ngModel>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="mt-5 duedate">
+            <label for="dueDate">Due</label><br>
+
+            <input type="date" name="dueDate" id="dueDate" class="mt-5" ngModel/>
+          </div>
+          <div class="btnbox">
+            <button class="btn mt-5" (click)="onSubmit(taskAdd.value)">Save</button>
+            <button class="btn mt-5" (click)="displayModeltoggle()">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+   <!-- //(click)="displayModeltoggle() -->

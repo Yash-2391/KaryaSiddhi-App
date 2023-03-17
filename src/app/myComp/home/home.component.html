@@ -1,0 +1,36 @@
+<div class="home">
+  <h3 class="marginAll">DashBoard</h3>
+  <h4 class="text-center">{{ currentDate | date : "fullDate" }}</h4>
+  <h1 class="text-center">{{ greet }}, {{ name }}</h1>
+  <div class="infoLine marginAll">
+    <div class="dropDown">
+      <select name="durationDD" id="durationDd">
+        <option value="week">This Week</option>
+        <option value="week">This Month</option>
+      </select>
+    </div>
+
+    <div class="taskCompleted">
+      <a routerLink="/"><i class="fa-regular fa-circle-check fa-2x iconColor" ></i></a>
+      <h3 class="ml-5">{{completeTaskList.length}}</h3>
+      <h4 class="ml-5">Task Completed</h4>
+    </div>
+
+    <div class="taskAssigned">
+      <i class="fa-solid fa-user-pen fa-2x"></i>
+      <h3 class="ml-5">{{taskList.length}}</h3>
+      <h4 class="ml-5">Task Assigned</h4>
+    </div>
+  </div>
+  <div class="taskList marginAll">
+    <div class="taskLine">
+      <h3>My Priorities</h3>
+      <span class="ml-5">(next 3 days - high Priorities)</span>
+      <button (click)="toggleModel()"><i class="ml-5 fa-solid fa-plus fa-2x"></i></button>
+    </div>
+  </div>
+  <div class="appTaskList">
+    <app-task-item [taskList]="taskListNextThreeDays" (reload)="reload($event)"></app-task-item>
+  </div>
+</div>
+<app-input-modal *ngIf="displayModel" (x)="unDisplay($event)" [myTask]="myTask"></app-input-modal>

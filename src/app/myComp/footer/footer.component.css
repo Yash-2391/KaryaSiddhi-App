@@ -1,0 +1,9 @@
+.footer{
+  height: 100%;
+  width: 100%;
+}
+.footer div{
+  margin: 1vh;
+  display: flex;
+  justify-content: center;
+}
